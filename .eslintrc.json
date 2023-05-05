@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "tsconfigRootDir": ".",
+    "project": ["./tsconfig.json"]
+  },
+  "extends": ["prettier"],
+  "rules": {
+    "@typescript-eslint/prefer-includes": 0,
+    "@typescript-eslint/no-misused-promises": 0,
+    "@typescript-eslint/unbound-method": 0,
+    "@typescript-eslint/prefer-string-starts-ends-with": 0,
+    "@typescript-eslint/prefer-regexp-exec": 0,
+    "no-unexpected-multiline": 2,
+    "no-unreachable": 2,
+    "semi": 0,
+    "@typescript-eslint/semi": [1, "never"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      1,
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "no-undef": 0,
+    "no-prototype-builtins": 0,
+    "no-dupe-class-members": 0,
+    "@typescript-eslint/no-dupe-class-members": 2,
+    "no-case-declarations": 0
+  }
+}
